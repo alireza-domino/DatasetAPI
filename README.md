@@ -62,3 +62,13 @@ class S3Config(Config):
 ```
 
 
+```
+@attr.s(auto_attribs=True)
+class RedshiftConfig(Config):
+    """Redshift datasource configuration."""
+
+    database: Optional[str] = _config(elem=ConfigElem.DATABASE)
+
+    password: Optional[str] = _cred(elem=CredElem.PASSWORD)
+    username: Optional[str] = _cred(elem=CredElem.USERNAME)
+```
