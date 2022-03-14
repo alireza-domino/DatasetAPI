@@ -27,11 +27,7 @@ print("content binary")
 print(content)
 
 # Downlaoding 
-data_source_obj.Object(" ").download_file(file_name)
-
-
-shutil.move("/mnt/code/"+ file_name, "/mnt/artifacts/")
-
+data_source_obj.Object(file_name).download_file("/mnt/artifacts/" + file_name)
 
 
 
