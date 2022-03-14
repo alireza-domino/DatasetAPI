@@ -1,10 +1,7 @@
-# run as a job
-# download a file through data source
-# daily report
-
-
 from domino import data_sources
 import os
+import shutil
+
 
 
 myClient = data_sources.DataSourceClient()
@@ -30,7 +27,10 @@ print("content binary")
 print(content)
 
 # Downlaoding 
-data_source_obj.Object(file_name).download_file(file_name)
+data_source_obj.Object(" ").download_file(file_name)
+
+
+shutil.move("/mnt/code/"+ file_name, "/mnt/artifacts/")
 
 
 
